@@ -1,177 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <title>Flexbox Pricing Table</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mondrian Project</title>
   <style>
-    body {
-      font-family: 'Sono', sans-serif;
-    }
-    /* Hint: What can you do with a media query and flexbox? */
-    @media (max-width: 1600px) {
-      .pricing-container{
-      display: flex;
-      gap:2rem;
-      justify-content: center;
-      align-items: center;
+    /* 
+    Write your CSS here 
+    Gap Colour: #000
+    White: #F0F1EC
+    Red: #E72F24
+    Black: #232629
+    Blue: #004592
+    Yellow: #F9D01E
 
+    For dimensions, see dimensions.png image.
+    HINT: Remember you can't change the properties of grid lines.
+    But grid lines are transparent!
+    */
+    .container{
+      margin-left: 25%;
+      display: grid;
+      width: 748px;
+      height:748px;
+      grid-template-columns: 320px 198px 153px 50px;
+      grid-template-rows: 414px 130px 155px 22px;
+      gap:9px;
+      background-color: black;
+      border: solid 20px black;
     }
-
-    .plan-title{
-      font-weight: bolder;
-      align-content: center;
+    .item{
+      background-color: white;
     }
-
-    .plan-price{
-      font-size: 25px;
-      font-weight: bolder;
+    .red{
+      background-color: red;
     }
-
-    .pricing-plan{
-      flex:1;
-      max-width: 400px;
+    .white1{
+      grid-column: span 3;
+    }
+    .white2{
+      grid-row: span 2;
+    }
+    .white3{
+      grid-area: 2/2/4/4;
+    }
+    .blue{
+      background-color: blue;
+      border-bottom: 10px solid #000;
+    }
+    .white4{
+      grid-row:span 2;
+    }
+    .yellow{
+      background-color: yellowgreen;
+    }
+    .grey{
       background-color: grey;
-      flex-basis: 100;
-      text-align: center;
-      border-radius: 5px;
-      position:relative;
-      margin-top:17%;
-      padding:20px;
-    }
-    .plan-button{
-      background-color: tomato;
-      color:white;
-      border-radius: 10%;
-      font-size: 10px;
-      padding: 5%;
-   }
-
-   li{
-    font-weight: bold;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-   }
-  }
-    @media (max-width: 1200px) {
-      .pricing-container{
-        display: flex;
-        flex-direction: column;
-        gap:10px;
-      }
-      .plan-title{
-      font-weight: bolder;
-      align-content: center;
-    }
-
-    .plan-price{
-      font-size: 25px;
-      font-weight: bolder;
-    }
-
-    .pricing-plan{
-      flex:1;
-      max-width: 400px;
-      background-color: grey;
-      flex-basis: 100;
-      text-align: center;
-      border-radius: 5px;
-      position:relative;
-      margin-top:17%;
-      padding:20px;
-    }
-    .plan-button{
-      background-color: tomato;
-      color:white;
-      border-radius: 10%;
-      font-size: 10px;
-      padding: 5%;
-   }
-
-   li{
-    font-weight: bold;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-   }
-    }
-    @media (max-width: 418px) {
-      .pricing-container{
-        display: flex;
-        flex-direction: column;
-        gap:10px;
-        height:100vh;
-      }
-      .plan-title{
-      font-weight: bolder;
-      align-content: center;
-    }
-
-    .plan-price{
-      font-size: 25px;
-      font-weight: bolder;
-    }
-
-    .pricing-plan{
-      flex:1;
-      max-width: 400px;
-      background-color: grey;
-      flex-basis: 100;
-      text-align: center;
-      border-radius: 5px;
-      position:relative;
-      margin-top:17%;
-      padding:20px;
-    }
-    .plan-button{
-      background-color: tomato;
-      color:white;
-      border-radius: 10%;
-      font-size: 10px;
-      padding: 5%;
-   }
-
-   li{
-    font-weight: bold;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-   }
     }
   </style>
 </head>
 
 <body>
-  <div class="pricing-container">
-    <div class="pricing-plan">
-      <div class="plan-title">Basic</div>
-      <div class="plan-price">$9.99/month</div>
-      <ul class="plan-features">
-        <li>✅ 10GB Storage</li>
-        <li>✅ 1 User</li>
-        <li>🚫 Support</li>
-      </ul>
-      <button class="plan-button">Sign Up</a>
-    </div>
-    <div class="pricing-plan">
-      <div class="plan-title">Standard</div>
-      <div class="plan-price">$19.99/month</div>
-      <ul class="plan-features">
-        <li>✅ 50GB Storage</li>
-        <li>✅ 5 Users</li>
-        <li>✅ Phone &amp; Email Support</li>
-      </ul>
-      <button class="plan-button">Sign Up</a>
-    </div>
-    <div class="pricing-plan">
-      <div class="plan-title">Premium</div>
-      <div class="plan-price">$49.99/month</div>
-      <ul class="plan-features">
-        <li>✅ 100GB Storage</li>
-        <li>✅ 10 Users</li>
-        <li>✅ 24/7 Support</li>
-      </ul>
-      <button class="plan-button">Sign Up</a>
-    </div>
+  <!-- Write your HTML here -->
+  <div class="container">
+    <div class = "red"></div>
+    <div class = "item white1"></div>
+    <div class = "item white2"></div>
+    <div class = "item white3"></div>
+    <div class = "item blue"></div>
+    <div class = "item white4"></div>
+    <div class = "item"></div>
+    <div class = "item yellow"></div>
+    <div class ="item grey"></div>
   </div>
-
 </body>
 
 </html>
